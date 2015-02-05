@@ -1,0 +1,14 @@
+
+<h1> Cool Adress Book :) </h1>
+
+<%= link_to("Find contact", people_path) %>
+<%= link_to("New contact", new_person_path) %>
+<hr>
+<h1>Search Results</h1>
+<% if @people %>
+    <% @people.each do |person| %>
+    <%= link_to(person.name, person_path(person.id)) %> 
+    <% end %>
+  <% else %>
+    <%= 'Nothing matches' %>
+<% end %>

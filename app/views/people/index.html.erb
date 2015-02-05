@@ -1,0 +1,12 @@
+<h3>All your contacts</h3>
+
+<ul>
+  <% @people.each do |person| %>
+    <li> 
+      <%= link_to(person.name, person_path(person.id)) %>
+    </li>
+ <% end %>
+</ul>
+
+<%= link_to('Go Back', '/') %>
+
