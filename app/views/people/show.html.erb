@@ -1,7 +1,12 @@
 <h3><%= @person.name %> </h3>
 
 <p><%= @person.adress %></p>
-<p><%= @person.phone %></p>
-<p><%= @person.email %></p>
 
+<% @person.emails.each do |email| %>
+  <p><%= email.e_address %></p>
+  <%end%>
+
+<% @person.phones.each do |phone| %>
+  <p><%= phone.phone %></p>
+  <%end%>
 <%= link_to('Go Back', '/') %>

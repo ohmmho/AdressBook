@@ -4,6 +4,9 @@
   <% @people.each do |person| %>
     <li> 
       <%= link_to(person.name, person_path(person.id)) %>
+      <%= link_to("Add phone", new_person_phone_path(person.id)) %>
+      <%= link_to("Add email", new_person_email_path(person.id)) %>
+
     </li>
  <% end %>
 </ul>
